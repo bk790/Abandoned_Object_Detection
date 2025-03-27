@@ -45,7 +45,7 @@ Modify `config.py` to fine-tune detection parameters such as:
 - **Frame Sampling Rate**
 
 ## Output
-![Detection Output](output.png)
+![Detection Output](output.PNG)
 
 ## Demo
 Include images, GIFs, or a link to a demo video showcasing the detection in action.
