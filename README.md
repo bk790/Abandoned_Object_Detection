@@ -51,8 +51,6 @@ The system processes video streams and highlights abandoned objects. Detected ob
 - Implement remote alerting through a cloud-based notification system.
 - Enhance model accuracy using fine-tuned datasets.
 
-## Contributors
-- Your Name ([GitHub Profile](https://github.com/your-profile))
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
