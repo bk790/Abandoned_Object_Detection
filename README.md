@@ -1,27 +1,27 @@
 # Abandoned Object Detection
 
 ## Overview
-Abandoned Object Detection is a computer vision-based system that identifies unattended objects in public spaces using deep learning and image processing techniques. This project is designed to enhance security measures by detecting objects left behind and triggering alerts for further investigation.
+This project implements an **Abandoned Object Detection** system using computer vision techniques. The system tracks objects in a video stream and detects unattended luggage, bags, or other suspicious items in public areas using **YOLOv8** and **Background Subtraction**.
 
 ## Features
-- **Real-time Object Detection**: Uses pre-trained deep learning models to detect objects in video frames.
-- **Background Subtraction**: Differentiates static objects from moving ones to identify abandoned items.
-- **Time-Based Tracking**: Monitors objects left unattended for a predefined duration.
-- **Alert Mechanism**: Triggers notifications or alarms upon detecting abandoned objects.
-- **Customizable Sensitivity**: Adjustable detection parameters for various environments.
+- **Real-time Object Detection**: Uses **YOLOv8** to identify luggage-related objects.
+- **Object Tracking**: Assigns unique IDs to detected objects and tracks their movement.
+- **Background Subtraction**: Detects stationary objects using adaptive MOG2 background subtraction.
+- **Abandonment Detection**: Triggers alerts if an object remains static for a set duration.
+- **Customizable Parameters**: Adjust tracking sensitivity and detection thresholds.
+- **Optimized for Performance**: Runs efficiently on both CPU and GPU.
 
 ## Technologies Used
 - **Programming Language**: Python
-- **Frameworks & Libraries**: OpenCV, TensorFlow/PyTorch, NumPy, DeepFace (for panic detection)
-- **Model**: Pre-trained CNN-based object detection (YOLO, Faster R-CNN, or SSD)
-- **Deployment**: Flask/Django (optional for API integration)
+- **Libraries & Frameworks**: OpenCV, NumPy, TensorFlow/PyTorch, Ultralytics YOLO
+- **Model**: YOLOv8 (Pre-trained on COCO dataset)
+- **Tracking Algorithm**: Custom centroid tracking algorithm
 
 ## Installation
 ### Prerequisites
-Ensure you have Python installed on your system.
-
+Ensure you have Python installed, then install the required dependencies:
 ```sh
-pip install opencv-python numpy tensorflow torch torchvision deepface flask
+pip install opencv-python numpy torch torchvision ultralytics
 ```
 
 ### Clone Repository
@@ -31,30 +31,30 @@ cd abandoned-object-detection
 ```
 
 ## Usage
-1. Run the detection script:
+1. **Run YOLO-based Object Detection**
    ```sh
    python detect_abandoned_objects.py
    ```
-2. Adjust parameters in `config.py` for different environments.
-3. The system will process video feeds and highlight abandoned objects.
-
-## Configuration
-Modify `config.py` to fine-tune detection parameters such as:
-- **Detection Threshold**
-- **Time to Trigger Alarm**
-- **Frame Sampling Rate**
+2. **Run Background Subtraction-based Detection**
+   ```sh
+   python background_subtraction.py
+   ```
+3. Modify parameters in `config.py` for different environments.
 
 ## Output
+The system processes video streams and highlights abandoned objects. Detected objects are labeled in real-time, and alerts are triggered for static objects.
+
 ![Detection Output](output.PNG)
 
-
-
 ## Future Enhancements
-- Integration with security camera systems
-- Cloud-based alert system with remote monitoring
-- Multi-object tracking for crowded environments
+- Improve multi-object tracking in crowded environments.
+- Implement remote alerting through a cloud-based notification system.
+- Enhance model accuracy using fine-tuned datasets.
 
+## Contributors
+- Your Name ([GitHub Profile](https://github.com/your-profile))
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
