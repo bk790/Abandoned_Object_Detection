@@ -47,16 +47,13 @@ Modify `config.py` to fine-tune detection parameters such as:
 ## Output
 ![Detection Output](output.PNG)
 
-## Demo
-Include images, GIFs, or a link to a demo video showcasing the detection in action.
+
 
 ## Future Enhancements
 - Integration with security camera systems
 - Cloud-based alert system with remote monitoring
 - Multi-object tracking for crowded environments
 
-## Contributors
-- Your Name ([GitHub Profile](https://github.com/your-profile))
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
